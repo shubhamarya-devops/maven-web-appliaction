@@ -29,17 +29,17 @@
 	</properties>
 	<repositories>
    		 <repository>
-       			 <id>sa-remoterepo</id>
+       			 <id>nexus</id>
        			 <url>http://192.168.1.11:8081/repository/sa-remoterepo/</url>
    		 </repository>
 	</repositories>
 
 
 	<dependencies>
-		<dependency>
-             		 <groupId>com.mt</groupId>
- 			 <artifactId>mail</artifactId>
- 			 <version>1.0.0</version>
+		 <dependency>
+  			<groupId>com.mt</groupId>
+  			<artifactId>mail</artifactId>
+  			<version>1.0.0</version>
 		 </dependency>
 		 <dependency>
 			<groupId>org.json</groupId>
