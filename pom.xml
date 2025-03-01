@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.0</version>
 	
 	<name>maven-web-application</name>
 
@@ -21,22 +21,32 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.138.81.149:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>passw0rd</sonar.password> 
+		<sonar.host.url>http://192.168.1.11:7000/</sonar.host.url>
+		<sonar.token>squ_5269848bf97d5ca77343a2f2ec863b00704b675b</sonar.token>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+	<repositories>
+   		 <repository>
+       			 <id>sa-remoterepo</id>
+       			 <url>http://192.168.1.11:8081/repository/sa-remoterepo/</url>
+   		 </repository>
+	</repositories>
+
 
 	<dependencies>
-		
 		<dependency>
+             		 <groupId>com.mt</groupId>
+ 			 <artifactId>mail</artifactId>
+ 			 <version>1.0.0</version>
+		 </dependency>
+		 <dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20160212</version>
 		</dependency>
-		
+
 		<!-- test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -59,8 +69,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- compile dependencies -->
 
+		<!-- compile dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -97,14 +107,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.212.71.229:9980/mithuntechnologies/repository/canarabank-snapshot/</url>
+	      <name>Axis Bank Releases Nexus Repository</name>
+	      <url>http://192.168.79.130:8081/repository/axisbank-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.212.71.229:9980/mithuntechnologies/repository/canarabank-release/</url>
+	      <name>Axis Bank Snapshot Nexus Repository </name>
+	      <url>http://192.168.79.130:8081/repository/axisbank-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
