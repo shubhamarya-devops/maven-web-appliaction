@@ -111,13 +111,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Axis Bank Releases Nexus Repository</name>
-	      <url>http://192.168.79.130:8081/repository/axisbank-Release/</url>
+	      <url>http://192.168.1.11:8081/repository/axisbank-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Axis Bank Snapshot Nexus Repository </name>
-	      <url>http://192.168.79.130:8081/repository/axisbank-Snapshot/</url>
+	      <url>http://192.168.1.11:8081/repository/axisbank-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
