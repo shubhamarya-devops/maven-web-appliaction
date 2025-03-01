@@ -27,20 +27,23 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+	<!--
 	<repositories>
    		 <repository>
        			 <id>nexus</id>
        			 <url>http://192.168.1.11:8081/repository/sa-remoterepo/</url>
    		 </repository>
 	</repositories>
-
+	-->
 
 	<dependencies>
-		 <dependency>
+		<!-- 
+		<dependency>
   			<groupId>com.mt</groupId>
   			<artifactId>mail</artifactId>
   			<version>1.0.0</version>
 		 </dependency>
+		-->
 		 <dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
