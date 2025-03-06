@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>1.1.0</version>
+	<version>1.1.0-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -21,26 +21,29 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://192.168.1.11:7000/</sonar.host.url>
+		<sonar.host.url>http://192.168.1.15:7000/</sonar.host.url>
 		<sonar.token>squ_5269848bf97d5ca77343a2f2ec863b00704b675b</sonar.token>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+	<!--
 	<repositories>
    		 <repository>
-       			 <id>sa-remoterepo</id>
+       			 <id>nexus</id>
        			 <url>http://192.168.1.11:8081/repository/sa-remoterepo/</url>
    		 </repository>
 	</repositories>
-
+	-->
 
 	<dependencies>
+		<!-- 
 		<dependency>
-             		 <groupId>com.mt</groupId>
- 			 <artifactId>mail</artifactId>
- 			 <version>1.0.0</version>
+  			<groupId>com.mt</groupId>
+  			<artifactId>mail</artifactId>
+  			<version>1.0.0</version>
 		 </dependency>
+		-->
 		 <dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -108,13 +111,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Axis Bank Releases Nexus Repository</name>
-	      <url>http://192.168.79.130:8081/repository/axisbank-Release/</url>
+	      <url>http://192.168.1.15:8081/repository/axisbank-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Axis Bank Snapshot Nexus Repository </name>
-	      <url>http://192.168.79.130:8081/repository/axisbank-Snapshot/</url>
+	      <url>http://192.168.1.15:8081/repository/axisbank-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
