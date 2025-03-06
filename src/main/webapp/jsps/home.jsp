@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Mithun Technologies. Ph No: +91-9980923226,+91-9900012028</h1>
-<h1 align="center"> Mithun Technologies- Very Good Training center for DevOps & Cloud, Python, Java & Node JS </h1>
+<h1 align="center"> Prince Optical- Very Good Training center for DevOps & Cloud, Python, Java & Node JS </h1>
 
 <h2> Trainer Name: Balaji Reddy Lachhannagari</h2>
 <hr>
@@ -39,7 +39,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		Mithun Technologies, 
 		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
 		Bangalore,
-		+91-9980923226,+91-9900012028
+		+91-8005598436,+91-9900012028
 		devopstrainingblr@gmail.com
 		<br>
 		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
