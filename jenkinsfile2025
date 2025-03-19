@@ -1,7 +1,8 @@
 node{
     def mavenHome = tool name:'maven 3.9.8'
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))])
-    
+    echo "The Build Number: ${env.BUILD_NUMBER}"
+    echo "The Build ID: ${env.BUILD_ID}"
     stage('CheckOutCode')
     {
         git branch: 'devlopment', credentialsId: 'f821f854-90e7-44d8-bc1b-bb3074d09dec', url: 'https://github.com/shubhamarya-devops/maven-web-appliaction.git'
