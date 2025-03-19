@@ -1,0 +1,31 @@
+node{
+    def mavenHome = tool name:'maven 3.9.8'
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))])
+    
+    stage('CheckOutCode')
+    {
+        git branch: 'devlopment', credentialsId: 'f821f854-90e7-44d8-bc1b-bb3074d09dec', url: 'https://github.com/shubhamarya-devops/maven-web-appliaction.git'
+    }
+    
+    stage('Build')
+    {
+        sh"${mavenHome}/bin/mvn clean package"
+    }
+    
+    stage('ExecuteSonarQubeReport')
+    {
+        sh"${mavenHome}/bin/mvn clean sonar:sonar"
+    }
+    
+    stage('UploadArtifactsIntoNexus')
+    {
+        sh"${mavenHome}/bin/mvn clean deploy"
+    }
+    
+    stage('deployToTomcat')
+    {
+        
+        deploy adapters: [tomcat9(credentialsId:'1a210e17-fbc1-4e98-8f61-1cde1f2c766d', parth: '/var/lib/jenkins/workspace/pipelineTesting/target/maven-web-application.war', url: 'http://192.168.1.11:7070/')],
+        war: '**/*.war'
+    }
+}
