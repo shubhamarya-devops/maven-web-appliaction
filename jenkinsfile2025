@@ -29,7 +29,7 @@ node{
         {
         
             deploy adapters: [tomcat9(credentialsId:'1a210e17-fbc1-4e98-8f61-1cde1f2c766d', parth: '/var/lib/jenkins/workspace/pipelineTesting/target/maven-web-application.war', url: 'http://192.168.1.11:7070/')],
-            war: '**/*.war'
+            war: ''
         }
     }
     catch(e)
